@@ -1,0 +1,1 @@
+function render(n){n.map(function(n){return n.main})}
