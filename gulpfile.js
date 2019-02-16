@@ -31,6 +31,9 @@ gulp.task('minjs', function() {
         .pipe(minjs())
         .pipe(gulp.dest('./dist/js'))
 });
-
+//监听cssjs
+gulp.task('auto', function() {
+    return gulp.watch(['./dist/css/**/*.scss', './dist/js/**/*.js'], gulp.series('mincss', 'minjs'))
+});
 //管理开发任务
 gulp.task('dev', gulp.series('bysass', 'minjs', 'startserver', 'mincss'));

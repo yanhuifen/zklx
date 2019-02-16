@@ -5,4 +5,72 @@
     height: 100%;
     background: #eee;
     font-size: pxTorem(18px);
+    @include box_flex;
+    @include direction(column);
+    header {
+        width: 100%;
+        height: pxTorem(200px);
+        background: palevioletred;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    section {
+        width: 100%;
+        height: 100%;
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        h2 {
+            line-height: pxTorem(60px);
+            font-size: pxTorem(24px);
+        }
+        img {
+            width: 100%;
+            height: pxTorem(100px);
+        }
+        .awd {
+            width: 100%;
+            height: pxTorem(100px);
+            border-top: pxTorem(1px) solid #ccc;
+            border-bottom: pxTorem(1px) solid #ccc;
+            line-height: pxTorem(30px);
+            background: #fff;
+            p {
+                margin-top: pxTorem(20px);
+                color: #666;
+            }
+            span {
+                color: #888;
+                font-size: pxTorem(14px);
+            }
+        }
+        .all {
+            width: 100%;
+            height: pxTorem(80px);
+            background: #fff;
+            margin-top: pxTorem(5px);
+            @include box_flex;
+            dl {
+                width: pxTorem(80px);
+                height: pxTorem(80px);
+                @include box_flex;
+                @include direction(column);
+                @include align;
+                @include justify;
+                dt {
+                    width: pxTorem(20px);
+                    height: pxTorem(20px);
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                dd {
+                    font-size: pxTorem(14px);
+                    color: #888;
+                }
+            }
+        }
+    }
 }
